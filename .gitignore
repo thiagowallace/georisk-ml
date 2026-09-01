@@ -1,0 +1,44 @@
+# Python virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment variables
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Raw and generated data
+data/raw/*
+data/interim/*
+data/processed/*
+
+# Keep directory structure
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+
+# Model artifacts
+*.pkl
+*.joblib
+*.onnx
+
+# Temporary files
+*.tmp
+*.temp
