@@ -15,12 +15,6 @@
 
 ---
 
-## Final Project Figure
-
-<p align="center">
-  <img src="docs/images/georisk_ml_final_figure.png" width="1000" />
-</p>
-
 ## Overview
 
 **GeoRisk ML** is an applied Data Science project that combines **Machine Learning, geospatial data processing, remote sensing, spatial validation and raster inference** to support landslide susceptibility analysis.
@@ -44,16 +38,16 @@ The five-stage core workflow is now **completed**.
 
 ---
 
-## Final Susceptibility Mapping
+## Final Project Figure
 
 <p align="center">
-  <img src="docs/images/map_logistic.png" width="760" />
+  <img src="docs/images/georisk_ml_final_figure.png" width="1000" />
 </p>
 
 <p align="center">
   <em>
-    Logistic Regression landslide susceptibility score for Santa Tereza,
-    Rio Grande do Sul, Brazil. Spatial resolution: 30 m.
+    GeoRisk ML — End-to-End Data Science workflow for landslide susceptibility mapping
+    in Santa Tereza, Rio Grande do Sul, Brazil.
   </em>
 </p>
 
@@ -900,11 +894,13 @@ georisk-ml/
 │
 ├── docs/
 │   ├── images/
+│   │   ├── georisk_ml_final_figure.png
 │   │   ├── map_logistic.png
 │   │   ├── map_random_forest.png
 │   │   ├── map_difference_lr_minus_rf.png
 │   │   └── positive_background_distributions.png
 │   │
+│   ├── final_figure.md
 │   ├── dataset_stage3.md
 │   ├── ml_eda_stage3.md
 │   ├── baseline_models_stage3.md
@@ -915,6 +911,7 @@ georisk-ml/
 ├── outputs/
 │   ├── eda/
 │   ├── figures/
+│   │   └── georisk_ml_final_figure.png
 │   └── models/
 │       ├── baseline/
 │       ├── spatial_validation/
@@ -922,6 +919,7 @@ georisk-ml/
 │       └── final/
 │
 ├── scripts/
+│   └── make_final_figure.py
 │
 ├── src/
 │   ├── extract/
@@ -1009,6 +1007,7 @@ Large datasets and generated outputs may be excluded from Git according to the r
 - [x] Model-surface comparison
 - [x] Reproducibility validation
 - [x] Final documentation
+- [x] Final presentation figure
 
 ---
 
