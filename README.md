@@ -35,6 +35,19 @@ The pilot area is **Santa Tereza, Rio Grande do Sul, Brazil**, one of the region
 
 The five-stage core workflow is now **completed**.
 
+## Final Susceptibility Mapping
+
+<p align="center">
+  <img src="docs/images/map_logistic.png" width="760" />
+</p>
+
+<p align="center">
+  <em>
+    Logistic Regression landslide susceptibility score for Santa Tereza,
+    Rio Grande do Sul, Brazil. Spatial resolution: 30 m.
+  </em>
+</p>
+
 ---
 
 # Project Goals
