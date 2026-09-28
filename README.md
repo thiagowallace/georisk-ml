@@ -29,11 +29,14 @@ The project was designed as an **End-to-End Machine Learning workflow**, coverin
 - spatial cross-validation;
 - sensitivity analysis;
 - full-area spatial inference;
-- landslide susceptibility mapping.
+- landslide susceptibility mapping;
+- automated testing and reproducibility checks.
 
 The pilot area is **Santa Tereza, Rio Grande do Sul, Brazil**, one of the regions affected by the extreme rainfall and landslide events that occurred in the state in 2024.
 
 The five-stage core workflow is now **completed**.
+
+---
 
 ## Final Susceptibility Mapping
 
@@ -47,6 +50,17 @@ The five-stage core workflow is now **completed**.
     Rio Grande do Sul, Brazil. Spatial resolution: 30 m.
   </em>
 </p>
+
+### Final project snapshot
+
+```text
+80,931 valid cells mapped
+30 m spatial resolution
+5-fold spatial cross-validation
+Logistic Regression ROC-AUC: 0.860
+Random Forest ROC-AUC: 0.848
+130 automated tests passing
+```
 
 ---
 
@@ -524,7 +538,46 @@ It is included as an **exploratory product** and was not independently validated
 
 ---
 
-## Raster Specifications
+## Logistic Regression Surface
+
+<p align="center">
+  <img src="docs/images/map_logistic.png" width="700" />
+</p>
+
+<p align="center">
+  <em>Logistic Regression susceptibility surface.</em>
+</p>
+
+---
+
+## Random Forest Surface
+
+<p align="center">
+  <img src="docs/images/map_random_forest.png" width="700" />
+</p>
+
+<p align="center">
+  <em>Random Forest susceptibility surface.</em>
+</p>
+
+---
+
+## Spatial Difference Between Models
+
+<p align="center">
+  <img src="docs/images/map_difference_lr_minus_rf.png" width="700" />
+</p>
+
+<p align="center">
+  <em>
+    Spatial comparison between Logistic Regression and Random Forest outputs.
+    Values close to the center of the scale indicate greater agreement.
+  </em>
+</p>
+
+---
+
+# Raster Specifications
 
 All final GeoTIFFs use:
 
@@ -568,7 +621,11 @@ The Logistic Regression surface shows a wider score range, while Random Forest p
 
 ---
 
-# Positive vs Background Scores
+# Supervised Sample Score Distributions
+
+<p align="center">
+  <img src="docs/images/positive_background_distributions.png" width="950" />
+</p>
 
 The final trained models were also evaluated descriptively over the supervised samples.
 
@@ -681,7 +738,7 @@ safely handled these unseen categories.
 
 No categories were replaced, grouped or removed.
 
-However, the models cannot learn a category-specific coefficient or contribution for classes that were absent during training.
+However, the models cannot learn a category-specific contribution for classes that were absent during training.
 
 This is documented as a limitation of the final spatial inference.
 
@@ -836,6 +893,12 @@ georisk-ml/
 │   └── processed/
 │
 ├── docs/
+│   ├── images/
+│   │   ├── map_logistic.png
+│   │   ├── map_random_forest.png
+│   │   ├── map_difference_lr_minus_rf.png
+│   │   └── positive_background_distributions.png
+│   │
 │   ├── dataset_stage3.md
 │   ├── ml_eda_stage3.md
 │   ├── baseline_models_stage3.md
