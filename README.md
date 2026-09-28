@@ -15,6 +15,12 @@
 
 ---
 
+## Final Project Figure
+
+<p align="center">
+  <img src="docs/images/georisk_ml_final_figure.png" width="1000" />
+</p>
+
 ## Overview
 
 **GeoRisk ML** is an applied Data Science project that combines **Machine Learning, geospatial data processing, remote sensing, spatial validation and raster inference** to support landslide susceptibility analysis.
